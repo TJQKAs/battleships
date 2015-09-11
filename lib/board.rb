@@ -66,7 +66,7 @@ class Board
   end
   end
     def all_ship_dead?
-      board.select{|s| s.class == Ship}.all? {|d| d.health == 0}
+      board.select{|s| s.is_a? Ship}.all? {|d| d.health == 0} 
   end
   def already_hit?(coord)
     @al_hits.include?(coord) 
